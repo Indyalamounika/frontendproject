@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         AWS_DEFAULT_REGION = 'us-east-1'
-        S3_BUCKET = 'yashi20'
+        S3_BUCKET = 'awsfrontendproject'
         CLOUDFRONT_DISTRIBUTION_ID = 'E1ETXJ3RKSJW87'
     }
 
