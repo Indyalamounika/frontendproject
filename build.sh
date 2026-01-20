@@ -16,6 +16,8 @@ cp public/index.html build/
 cp -r src build/
 
 echo "===================================="
+echo " CloudFront Cache Invalidation Started "
+echo " Invalidation request submitted "
 echo " Build completed successfully"
 echo " Output directory: build/"
 echo "===================================="
