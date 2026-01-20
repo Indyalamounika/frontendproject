@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         AWS_DEFAULT_REGION = 'us-east-1'
-        S3_BUCKET = 'aws-devops-microservices-frontend-1'
+        S3_BUCKET = 'yashi20'
         CLOUDFRONT_DISTRIBUTION_ID = 'E1ETXJ3RKSJW87'
     }
 
@@ -12,7 +12,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/Indyalamounika/frontendproject.git'
+                    url: 'https://github.com/priya1123-hub/frontendproject.git'
             }
         }
 
