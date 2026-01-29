@@ -4,7 +4,7 @@ pipeline {
     environment {
         AWS_DEFAULT_REGION = 'us-east-1'
         S3_BUCKET = 'awsdevops-microservices-frontend-1'
-        CLOUDFRONT_DISTRIBUTION_ID = 'E1ETXJ3RKSJW87'
+        CLOUDFRONT_DISTRIBUTION_ID = 'E3R9SM6W0RJLEU'
     }
 
     stages {
