@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>AWS Microservices App</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AWS Microservices App</title>
+
+  <!-- Prevent favicon 404 error -->
+  <link rel="icon" href="data:,">
 </head>
- 
+
 <body>
-<h1>AWS DevOps Microservices Project By Nexgen Team</h1>
- 
+
+  <h1>AWS DevOps Microservices Project By Nexgen Team</h1>
+
   <hr/>
- 
+
   <h2>Register</h2>
-<input type="text" id="regName" placeholder="Name" /><br/><br/>
-<input type="email" id="regEmail" placeholder="Email" /><br/><br/>
-<input type="password" id="regPassword" placeholder="Password" /><br/><br/>
-<button onclick="registerUser()">Register</button>
- 
+  <input type="text" id="regName" placeholder="Name" /><br/><br/>
+  <input type="email" id="regEmail" placeholder="Email" /><br/><br/>
+  <input type="password" id="regPassword" placeholder="Password" /><br/><br/>
+  <button id="registerBtn">Register</button>
+
   <hr/>
- 
+
   <h2>Login</h2>
-<input type="email" id="loginEmail" placeholder="Email" /><br/><br/>
-<input type="password" id="loginPassword" placeholder="Password" /><br/><br/>
-<button onclick="loginUser()">Login</button>
- 
+  <input type="email" id="loginEmail" placeholder="Email" /><br/><br/>
+  <input type="password" id="loginPassword" placeholder="Password" /><br/><br/>
+  <button id="loginBtn">Login</button>
+
   <hr/>
- 
+
   <h2>Other Services</h2>
-<button onclick="loadUsers()">Load Users</button>
-<button onclick="loadOrders()">Load Orders</button>
- 
+  <button id="usersBtn">Load Users</button>
+  <button id="ordersBtn">Load Orders</button>
+
   <hr/>
- 
+
   <pre id="result"></pre>
- 
+
+  <!-- Load JS at bottom -->
   <script src="app.js"></script>
+
 </body>
 </html>
