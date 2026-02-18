@@ -1,5 +1,5 @@
 // If frontend and backend are behind same ALB, leave empty:
-const API_BASE_URL = "https://mounikaindyala.fun/app.js";  
+const API_BASE_URL = "https://mounikaindyala.fun";  
 
 // ================= REGISTER =================
 async function registerUser() {
