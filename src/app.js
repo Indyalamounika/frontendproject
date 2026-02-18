@@ -1,55 +1,54 @@
- const API_BASE_URL = "http://mounikaindyala.fun:4000"; 
-// Change to https://mbry.digital when deployed
- 
-// ================= REGISTER =================
+document.addEventListener("DOMContentLoaded", () => {
+
+  document.getElementById("registerBtn").addEventListener("click", registerUser);
+  document.getElementById("loginBtn").addEventListener("click", loginUser);
+  document.getElementById("usersBtn").addEventListener("click", loadUsers);
+  document.getElementById("ordersBtn").addEventListener("click", loadOrders);
+
+});
+
+
 async function registerUser() {
   const name = document.getElementById("regName").value;
   const email = document.getElementById("regEmail").value;
   const password = document.getElementById("regPassword").value;
- 
-  const res = await fetch(`${API_BASE_URL}/register`, {
+
+  const res = await fetch("/register", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ name, email, password }),
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name, email, password })
   });
- 
-  const data = await res.json();
-  document.getElementById("result").innerText =
-    JSON.stringify(data, null, 2);
+
+  document.getElementById("result").innerText = await res.text();
 }
- 
-// ================= LOGIN =================
+
+
 async function loginUser() {
   const email = document.getElementById("loginEmail").value;
   const password = document.getElementById("loginPassword").value;
- 
-  const res = await fetch(`${API_BASE_URL}/login`, {
+
+  const res = await fetch("/login", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ email, password }),
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email, password })
   });
- 
-  const data = await res.json();
-  document.getElementById("result").innerText =
-    JSON.stringify(data, null, 2);
+
+  document.getElementById("result").innerText = await res.text();
 }
- 
-// ================= LOAD USERS =================
+
+
 async function loadUsers() {
-  const res = await fetch(`${API_BASE_URL}/users`);
+  const res = await fetch("/users");
   const data = await res.json();
   document.getElementById("result").innerText =
     JSON.stringify(data, null, 2);
 }
- 
-// ================= LOAD ORDERS =================
+
+
 async function loadOrders() {
-  const res = await fetch(`${API_BASE_URL}/orders`);
+  const res = await fetch("/orders");
   const data = await res.json();
   document.getElementById("result").innerText =
     JSON.stringify(data, null, 2);
 }
+
