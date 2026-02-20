@@ -1,6 +1,6 @@
 // ================= BASE URL =================
 // Use your ALB DNS
-const API_BASE_URL = "http://microservices-alb-1601462659.us-east-1.elb.amazonaws.com";
+const API_BASE_URL = "http://microservice-app-1904232203.us-east-1.elb.amazonaws.com";
 
 // ================= REGISTER =================
 async function registerUser() {
